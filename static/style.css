@@ -162,32 +162,34 @@ input, button {
 
 /* --- Responsive Design for Mobile --- */
 @media (max-width: 600px) {
-  .navbar h1 {
-    font-size: 20px; /* Make navbar text smaller */
-  }
+    .navbar h1 {
+        font-size: 20px;
+    }
 
-  .container {
-    width: 90%; /* Allow container to use more screen width */
-    padding: 20px 15px; /* Adjust padding */
-    margin-top: 70px;
-  }
+    .container {
+        /* --- Changed Lines --- */
+        width: 90%; /* Use 90% of the screen width */
+        max-width: 450px; /* Allow it to be a bit wider if needed */
+        padding: 20px 15px;
+        margin-top: 70px;
+    }
 
-  .search-box {
-    flex-direction: column; /* Stack the input and button vertically */
-    width: 100%;
-  }
+    .search-box {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-  .search-box input,
-  .search-box button {
-    width: 100%; /* Make input and button full width */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-  }
+    .search-box input,
+    .search-box button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-  .weather-card h2 {
-    font-size: 28px; /* Make city name font smaller */
-  }
+    .weather-card h2 {
+        font-size: 28px;
+    }
 
-  .weather-card p {
-    font-size: 16px; /* Adjust paragraph font size */
-  }
+    .weather-card p {
+        font-size: 16px;
+    }
 }
