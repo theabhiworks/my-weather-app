@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🌍 Weather App </title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="{% if weather.main %}bg-{{ weather.weather[0].main | lower }}{% endif %}"></body>
+    
+    <nav class="navbar">
+      <h1>🌍 Weather App</h1>
+    </nav>
+
+    
+    <div class="container">
+      <form method="POST" class="search-box">
+        <input type="text" name="city" placeholder="Enter city" required />
+        <button type="submit">Search</button>
+      </form>
+
+      {% if weather.main %}
+      <div class="weather-card">
+        <h2>{{ city }}</h2>
+        <p>🌡 Temp: {{ weather.main.temp }}°C</p>
+        <p>💨 Wind: {{ weather.wind.speed }} m/s</p>
+        <p>☁️ Condition: {{ weather.weather[0].description }}</p>
+        <p>💧 Humidity: {{ weather.main.humidity }}%</p>
+        <p>🌅 Sunrise: {{ weather.sys.sunrise | datetime }}</p>
+        <p>🌇 Sunset: {{ weather.sys.sunset | datetime }}</p>
+
+        <button id="playSoundBtn">🔊</button>
+      </div>
+      {% else %}
+      <p>City not found ❌</p>
+      {% endif %}
+    </div>
+    <audio id="weatherSound" autoplay loop></audio>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html> 
