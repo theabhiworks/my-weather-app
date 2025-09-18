@@ -131,9 +131,6 @@ body.bg-mist, body.bg-haze, body.bg-fog, body.bg-smoke, body.bg-dust, body.bg-sa
     .navbar h1 {
         font-size: 20px;
     }
-    .navbar h1 {
-        font-size: 20px;
-    }
 
     .container {
         /* This is the key fix */
@@ -147,16 +144,7 @@ body.bg-mist, body.bg-haze, body.bg-fog, body.bg-smoke, body.bg-dust, body.bg-sa
         flex-direction: column;
         gap: 15px;
     }
-    .search-box {
-        flex-direction: column;
-        gap: 15px;
-    }
 
-    .search-box input,
-    .search-box button {
-        width: 100%;
-        box-sizing: border-box;
-    }
     .search-box input,
     .search-box button {
         width: 100%;
@@ -166,13 +154,7 @@ body.bg-mist, body.bg-haze, body.bg-fog, body.bg-smoke, body.bg-dust, body.bg-sa
     .weather-card h2 {
         font-size: 28px;
     }
-    .weather-card h2 {
-        font-size: 28px;
-    }
 
-    .weather-card p {
-        font-size: 16px;
-    }
     .weather-card p {
         font-size: 16px;
     }
