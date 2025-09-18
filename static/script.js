@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
         weatherSound.src = "/static/sounds/rain.mp3";
     } else if (body.classList.contains("bg-snow")) {
         weatherSound.src = "/static/sounds/snow.mp3";
-    }else if (body.classList.contains("bg-mist")){
+    }else if (body.classList.contains("bg-mist","bg-haze")){
         weatherSound.src = "/static/sounds/mist.mp3";
     }
 
